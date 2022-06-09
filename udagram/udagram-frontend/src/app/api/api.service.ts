@@ -40,8 +40,10 @@ export class ApiService {
   }
 
   get(endpoint): Promise<any> {
+    console.log('😊API_HOST: ', API_HOST);
+    console.log('😎endpoint: ', endpoint);
     const url = `${API_HOST}${endpoint}`;
-    console.log('🚩url', url);
+    console.log('🚩url: ', url);
     const req = this.http
       .get(url, this.httpOptions)
       .pipe(map(ApiService.extractData));
