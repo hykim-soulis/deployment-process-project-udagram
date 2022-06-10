@@ -2,6 +2,8 @@ branch-defaults:
   default:
     environment: Udagramtest1-env
     group_suffix: null
+deploy:
+  artifact: www/Archive.zip
 environment-defaults:
   Udagramtest1-env:
     branch: null
@@ -16,6 +18,6 @@ global:
   instance_profile: null
   platform_name: null
   platform_version: null
-  repository: null
+  profile: null
   sc: git
   workspace_type: Application

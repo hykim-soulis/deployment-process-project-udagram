@@ -13,8 +13,9 @@
     "prod": "tsc && node ./www/server.js",
     "clean": "rm -rf www/ || true",
     "deploy": "npm run build && eb list && eb use Udagramtest1-env && eb deploy Udagramtest1-env",
-    "build": "npm install . && npm run clean && tsc && cp -rf src/config www/config && cp .npmrc www/.npmrc && cp package.json www/package.json && cd www && zip -r Archive.zip . && cd ..",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npm install . && npm run clean && tsc && chmod +x ./bin/set_env.sh && ./bin/set_env.sh && cp -rf src/config www/config && cp .npmrc www/.npmrc && cp package.json www/package.json && cd www && zip -r Archive.zip . && cd ..",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "setup:env": "chmod +x ./bin/env_setup.sh && ./bin/env_setup.sh"
   },
   "keywords": [],
   "author": "Gabriel Ruttner",

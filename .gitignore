@@ -1,0 +1,8 @@
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
+application_description.md
+infrastructure_description.md
+pipeline_description.md
